@@ -1,0 +1,116 @@
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      color: white;
+      background: linear-gradient(to right, black 30%, #001f4d);
+      overflow-x: hidden;
+    }
+
+    .page-1, .page-2, .page-3 {
+      position: relative;
+      width: 100vw;
+      height: 100vh;
+    }
+
+    .page-1 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .whale-wrapper {
+      position: absolute;
+      left: 12em;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 60vw; /* Adjust based on image size */
+      height: 60vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .whale {
+    max-height: 150%;  
+    z-index: 5;
+    --whale-scale: 1;
+    animation: whale-float 5s ease-in-out infinite;
+    transition: all 2.5s cubic-bezier(0.4, 0, 0.2, 1);
+    transform: translateY(0) scale(var(--whale-scale));
+    pointer-events: none;
+    transform-style: preserve-3d;
+    }
+
+    .whale-wrapper:hover .whale {
+    --whale-scale: 1.15;
+
+    }
+
+    @keyframes whale-float {
+      0%   { transform: translateY(0) scale(var(--whale-scale)); }
+      50%  { transform: translateY(-30px) scale(var(--whale-scale)); }
+      100% { transform: translateY(0) scale(var(--whale-scale)); }
+    }
+
+    .big-text {
+      position: absolute;
+      z-index: 1;
+      font-size: 6vw;
+      font-weight: bold;
+      color: white;
+      line-height: 0.9;
+      text-transform: uppercase;
+    }
+
+    .text-human {
+      top: 5%;
+      left: 0;
+    }
+
+    .text-destroyer {
+      top: 20%;
+      left: 0;
+    }
+
+    .text-oceans {
+      bottom: 0;
+      left: 0;
+    }
+
+    .action-text {
+      position: absolute;
+      right: 5%;
+      top: 25%;
+      z-index: 1;
+      max-width: 30%;
+    }
+
+    .action-text h2 {
+      font-size: 1.5vw;
+      margin-bottom: 0.5vw;
+      color: white;
+    }
+
+    .action-text p {
+      font-size: 1vw;
+      color: #b0c4de;
+    }
+
+
+/* Page 2 */
+    .page-2 {
+    background: linear-gradient(to right, green 30%, #001f4d);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+/* Page 3 */
+    .page-3 {
+        background: linear-gradient(to right, blue 30%, aqua);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
