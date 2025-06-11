@@ -75,6 +75,7 @@
     }
 
     .text-human {
+      color:aquamarine;
       top: 4%;
       left: 2%;
     }
@@ -85,6 +86,7 @@
     }
 
     .text-oceans {
+      color: white;
       bottom: 0;
       left: 2%;
     }
