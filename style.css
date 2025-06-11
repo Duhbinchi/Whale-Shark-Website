@@ -113,10 +113,20 @@
     .action-text p {
       background-color: rgba(25, 121, 255, 0.27);
       font-size: 1vw;
-            border-radius: 13px;
+      border-radius: 13px;
       padding: 0.5vw;
       color: yellow;
       font-weight: bold;
+    }
+
+/* Add smooth animation for action text h2,p */
+    .action-text h2, .action-text p {
+      transition: all 0.3s ease-in-out;
+    }
+
+    .action-text h2:hover, .action-text p:hover {
+      transform: scale(1.05);
+      background-color: rgba(25, 121, 255, 0.5);
     }
 
 
