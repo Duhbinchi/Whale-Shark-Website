@@ -1,5 +1,7 @@
 
     body {
+      color: aquamarine;
+      background-color: #001f4d;
       margin: 0;
       padding: 0;
       font-family: Arial, sans-serif;
@@ -30,17 +32,18 @@
       align-items: center;
     }
 
-    .whale-wrapper {
-      position: absolute;
-      left: 12em;
-      top: 50%;
-      transform: translateY(-50%);
-      width: 60vw; /* Adjust based on image size */
-      height: 60vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
+  .whale-wrapper {
+    position: relative; /* or remove position */
+    right: 5vw;
+    top: auto;
+    transform: none;
+    width: 60vw;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-5%);
+  }
 
     .whale {
     height: auto;
@@ -62,7 +65,7 @@
 
     @keyframes whale-float {
       0%   { transform: translateY(0) scale(var(--whale-scale)); }
-      50%  { transform: translateY(-30px) scale(var(--whale-scale)); }
+      50%  { transform: translateY(-20px) scale(var(--whale-scale)); }
       100% { transform: translateY(0) scale(var(--whale-scale)); }
     }
 
@@ -138,7 +141,7 @@
 
     .page-2 p {
       font-size: 1.2vw;
-      top: 2.6%;
+      top: 1rem;
       left: clamp(2vw, 3%, 10vw);
       position: absolute;
     }
@@ -163,7 +166,7 @@
     .page-2 h4 {
       font-size: 1.2vw;
       position: absolute;
-      top: 7%;
+      top: 2.5rem;
       left: clamp(2vw, 3%, 10vw);
     }
 
@@ -171,16 +174,14 @@
     
 /* Page 3 */
     .page-3 {
-      background: linear-gradient(to right, black 30%, #001f4d);
-      display: flex;
-      justify-content: center;
-      align-items: center;
+    background: linear-gradient(to right, black 30%, #001f4d);
+      /* justify-content: center; */
+      /* align-items: center; */
     }
-  
 
     .page-3 p {
       font-size: 1.2vw;
-      top: 2.6%;
+      top: 1rem;
       left: clamp(2vw, 3%, 10vw);
       position: absolute;
     }
@@ -202,12 +203,10 @@
       height: 1rem;
       border-left: 1px solid #fff;
     }
-
-
     .page-3 h4 {
       font-size: 1.2vw;
       position: absolute;
-      top: 7%;
+      top: 2.5rem;
       left: clamp(2vw, 3%, 10vw);
     }
 
