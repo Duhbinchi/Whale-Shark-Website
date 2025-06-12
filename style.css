@@ -43,6 +43,8 @@
     }
 
     .whale {
+    height: auto;
+    max-width: 125%;
     max-height: 130%;  
     z-index: 5;
     --whale-scale: 1;
@@ -100,29 +102,114 @@
     }
 
     .action-text h2 {
+      background-color: rgba(25, 121, 255, 0.17);
+      border-radius: 13px;
+      padding: 0.5vw;
       font-size: 1.5vw;
       margin-bottom: 0.5vw;
       color: white;
     }
 
     .action-text p {
+      background-color: rgba(25, 121, 255, 0.17);
+      border-radius: 13px;
+      padding: 0.5vw;
       font-size: 1vw;
       color: #b0c4de;
     }
+
+.action-text h2,
+.action-text p {
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.action-text h2:hover,
+.action-text p:hover {
+  transform: scale(1.08);
+}
 
 
 /* Page 2 */
     .page-2 {
     background: linear-gradient(to right, green 30%, #001f4d);
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      /* justify-content: center; */
+      /* align-items: center; */
     }
 
+    .page-2 p {
+      font-size: 1.2vw;
+      top: 2.6%;
+      left: clamp(2vw, 3%, 10vw);
+      position: absolute;
+    }
+
+    .page-2 .line {
+      position: absolute;
+      width: 30%;
+      top: 9.5%;
+      left: clamp(2vw, 3%, 10vw);
+      border-bottom: 1px solid #fff;
+    }
+
+    .page-2 .line::after {
+      content: '';
+      position: absolute;
+      right: .5rem;       
+      top: -0.5rem;    
+      width: 0;        
+      height: 1rem;
+      border-left: 1px solid #fff;
+    }
+    .page-2 h4 {
+      font-size: 1.2vw;
+      position: absolute;
+      top: 7%;
+      left: clamp(2vw, 3%, 10vw);
+    }
+
+
+    
 /* Page 3 */
     .page-3 {
-        background: linear-gradient(to right, blue 30%, aqua);
+      background: linear-gradient(to right, black 30%, #001f4d);
       display: flex;
       justify-content: center;
       align-items: center;
     }
+  
+
+    .page-3 p {
+      font-size: 1.2vw;
+      top: 2.6%;
+      left: clamp(2vw, 3%, 10vw);
+      position: absolute;
+    }
+
+    .page-3 .line {
+      position: absolute;
+      width: 30%;
+      top: 9.5%;
+      left: clamp(2vw, 3%, 10vw);
+      border-bottom: 1px solid #fff;
+    }
+
+    .page-3 .line::after {
+      content: '';
+      position: absolute;
+      right: .5rem;       
+      top: -0.5rem;    
+      width: 0;        
+      height: 1rem;
+      border-left: 1px solid #fff;
+    }
+
+
+    .page-3 h4 {
+      font-size: 1.2vw;
+      position: absolute;
+      top: 7%;
+      left: clamp(2vw, 3%, 10vw);
+    }
+
+
+  
