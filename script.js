@@ -1,0 +1,90 @@
+const infoContent = {
+  reefs: `
+    <p>
+      Philippines is considered as the <b>“center of the center”</b> when it comes to marine biodiversity. Due to the large number of the corals in the area, Philippines, Malaysia, Indonesia, Timor Leste, Papua New Guinea and Solomon Island are located in the region called <b>“Coral Triangle”</b> where 76% (605) of the world’s coral species (798) are found, the highest coral diversity in the world.
+      <br><br><img src="images/fact-coral_triangle.jpg">
+
+      If the region is the center of global marine biodiversity, the Philippines is the “center of the center.” Its marine resources are made up not just of coral reefs but “seagrass beds, mangrove and beach forests, fisheries, invertebrates, seaweeds, marine mammals and many others”
+      The Philippines has the second highest seagrass diversity in the world, second only to Australia. 
+      <br><br>Due to the country's marine biodiversity richness, conservationists have advocated its becoming a special focus of marine conservation efforts.
+
+      <br><br><em>      (The 4th National Report to the Convention on Biological Diversity, 2009, p. 45).
+    </p>
+  `,
+  resources: `
+    <p>
+
+    \u2022 <b>Ensures food security:</b> marine biodiversity supports up to 25% proportion of the country’s marine fisheries production.
+    <br><br>\u2022 <b>The Philippines</b> has 500 species of corals and 1,763 reef associated species. In which our nation's reef economid value is estimated to be around 202 billion pesos per year.
+    <br><br>\u2022 <b>Coral reefs boost eco-tourism</b>: 3rd largest reef area (~2.5 million hectares) and most diverse coral reef in the world where 1m² of healthy reefs = 1-5kg of white sand/year.
+    <br><br>\u2022 <b>Medical resources:</b> marine organisms like cone snails produce compounds used in medicines (e.g., ziconotide, a painkiller 1,000x stronger than morphine).
+
+    <br><br><br><br><em>(Philippine Biodiversity Strategy and Action Plan (2016), "National Estimates of Values of Philippine Reefs" Ecosystem Services (2018)
+    </p>
+  `,
+
+  resilience: `
+    <p>
+      Coral reefs and other coastal ecosystems such as seagrasses and mangroves are widely recognized to provide <b>protection against the devastating effects of strong waves</b> associated with tsunamis and storms. Meta-analyses reveal that coral reefs provide substantial protection against natural hazards by <b>reducing wave energy by an average of 97%</b> — reef crests alone dissipate most of this energy (86%).
+
+      <br><br><img src="images/fact-coastal_protection2.jpg">
+      <img src="images/fact-coastal_protection.jpg">
+
+      <em>(The effectiveness of coral reefs for coastal hazard risk reduction and adaptation. Nature Communications, 5, Article 3794.)
+    </p>
+  `,
+};
+
+const infoBox = document.getElementById('infoBox');
+const topics = document.querySelectorAll('.text-reefs, .text-resources, .text-resilience');
+const topicKeys = ['reefs', 'resources', 'resilience'];
+let currentIndex = 0;
+let isHovering = false;
+
+// Helper to remove .topic-active from all topics
+function clearActiveTopic() {
+  topics.forEach(el => el.classList.remove('topic-active'));
+}
+
+// Show info for a given topic key and animate the topic
+function showInfo(topic) {
+  infoBox.innerHTML = infoContent[topic];
+  infoBox.style.display = 'block';
+  clearActiveTopic();
+  // Add .topic-active to the relevant topic
+  document.querySelector(`.text-${topic}`).classList.add('topic-active');
+}
+
+// Hide info box and remove animation
+// function hideInfo() {
+// //   infoBox.style.display = 'none';
+//   clearActiveTopic();
+// }
+
+// Add hover listeners
+topics.forEach(el => {
+  el.addEventListener('mouseenter', () => {
+    isHovering = true;
+    const topic = el.getAttribute('data-topic');
+    showInfo(topic);
+    // Update currentIndex to the hovered topic's index
+    currentIndex = topicKeys.indexOf(topic);
+  });
+  el.addEventListener('mouseleave', () => {
+    isHovering = false;
+    hideInfo();
+  });
+});
+
+// Show the first topic quickly (e.g., after 1 second)
+showInfo(topicKeys[currentIndex]);
+currentIndex = (currentIndex + 1) % topicKeys.length;
+
+setTimeout(() => {
+  setInterval(() => {
+    if (!isHovering) {
+      showInfo(topicKeys[currentIndex]);
+      currentIndex = (currentIndex + 1) % topicKeys.length;
+    }
+  }, 15000); // 15 seconds
+}, 1000); // 1 second delay for the first topic (adjust as needed)

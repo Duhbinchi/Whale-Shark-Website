@@ -131,12 +131,23 @@
   transform: scale(1.08);
 }
 
+.action-text p:hover {
+  color: aquamarine;
+}
+
 
 /* Page 2 */
     .page-2 {
-    background: linear-gradient(to right, green 30%, #001f4d);
+    background-image: url(images/bg//tubbataha-reef6.jpg);
+    /* background: linear-gradient(to right, green 30%, #001f4d); */
       /* justify-content: center; */
       /* align-items: center; */
+      background-size: cover;         
+      background-position: center;   
+      background-repeat: no-repeat;  
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
 
     .page-2 p {
@@ -170,7 +181,119 @@
       left: clamp(2vw, 3%, 10vw);
     }
 
+    .text-reefs {
+      position: absolute;
+      top: 25%;
+      left: 2%;
+      /* line-height: 1.5; */
+      color: white;
+      background-color: rgba(0, 36, 52, 0.2);
+      padding: 0.5vw;
+      border-radius: 7px;
+      z-index: 1;
+    }
 
+    .text-resources {
+      position: absolute;
+      top: 40%;
+      left: 2%;
+      /* line-height: 1.5; */
+      color: white;
+      background-color: rgba(0, 36, 52, 0.2);
+      padding: 0.5vw;
+      border-radius: 7px;
+      z-index: 1;
+    }
+
+    .text-resilience {
+      position: absolute;
+      top: 55%;
+      left: 2%;
+      /* line-height: 1.5; */
+      color: white;
+      background-color: rgba(0, 36, 52, 0.2);
+      padding: 0.5vw;
+      border-radius: 7px;
+      z-index: 1;
+    }
+
+    .info-box {
+      display: flex;
+      position: absolute;
+      overflow: auto;
+      right: 3%;
+      top: 15%;
+      z-index: 1;
+      width: 750px;      /* Fixed width */
+      height: 500px;     /* Fixed height */
+      max-width: 50%;
+      max-height: 80%;
+      background-color: rgba(117, 211, 255, 0.5);
+      padding: 1rem;
+      border-radius: 10px;
+      box-sizing: border-box;
+    }
+
+  /* smooth scaling animations */
+    .text-reefs,
+    .text-resources,
+    .text-resilience {
+      transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .text-reefs:hover,
+    .text-resources:hover,
+    .text-resilience:hover {
+      color: aquamarine;
+      transform: scale(1.08);
+    }
+
+  /* Add this near your other .text-reefs:hover rules */
+  .topic-active {
+    color: aquamarine !important;
+    transform: scale(1.08);
+  }
+
+    .info-box h3 {
+      /* how can i make it centered */
+      position: absolute;
+      top: 5%;
+      left: 45%;
+      font-size: 2em;
+      color: #001f4d;
+    }
+
+    .info-box p {
+      top: -1%;
+      left: 1%;;
+      padding: 0.5rem;
+      font-size: 1em;
+      line-height: 1.5;
+      color: white;
+    }
+
+    .info-box b {
+    color: rgb(246, 255, 127);
+    font-weight: bold;
+    }
+
+    .info-box img {
+      display: block;
+      margin-left: auto;
+      margin-left: 4rem;
+      margin-bottom: 1rem;
+      height: 50%;
+      width: 30em;
+      border-radius: 10px;
+    }
+    .info-box::-webkit-scrollbar {
+      width: 8px; /* Width of the scrollbar */
+    }
+
+    .info-box::-webkit-scrollbar-thumb {
+      background-color: #001f4d; /* Color of the scrollbar thumb */
+      border-radius: 10px; /* Rounded corners for the scrollbar thumb */
+    }
     
 /* Page 3 */
     .page-3 {

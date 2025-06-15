@@ -4,17 +4,19 @@
  > a user guide to point at objects to show facts
  > nav bar where reference are also shown
 > scroll down (make a text to show so user dont get confused)
+> When hovering the the "BIODIVERSITY" text, it should show a popup with a definition 
 -->
 
 <!DOCTYPE html>
 <html lang="en">
+    
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ocean Awareness</title>
   <link rel="stylesheet" href="style.css">
-  
 </head>
+
 <body>
     <div class="page-1">
         <div class="whale-wrapper">
@@ -35,6 +37,12 @@
         <p>01</p>
         <div class="line"></div>
         <h4>Why is biodiversity important?</h4>
+
+        <div class="big-text text-reefs" data-topic="reefs">Reefs,</div>
+        <div class="big-text text-resources" data-topic="resources">Resources,</div>
+        <div class="big-text text-resilience" data-topic="resilience">Resilience</div>
+
+        <div class="info-box" id="infoBox"></div>
     </div>
 
     <div class="page-3">
@@ -43,6 +51,6 @@
         <h4>How does it affect human health?</h4>
     </div>
 
-
+    <script src="script.js"></script>
 </body>
 </html>
