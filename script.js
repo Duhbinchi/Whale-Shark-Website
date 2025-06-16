@@ -15,7 +15,7 @@ const infoContent = {
     <p>
 
     \u2022 <b>Ensures food security:</b> marine biodiversity supports up to 25% proportion of the country’s marine fisheries production.
-    <br><br>\u2022 <b>The Philippines</b> has 500 species of corals and 1,763 reef associated species. In which our nation's reef economid value is estimated to be around 202 billion pesos per year.
+    <br><br>\u2022 <b>The Philippines</b> has 500 species of corals and 1,763 reef associated species. In which our nation's reef economic value is estimated to be around 202 billion pesos per year.
     <br><br>\u2022 <b>Coral reefs boost eco-tourism</b>: 3rd largest reef area (~2.5 million hectares) and most diverse coral reef in the world where 1m² of healthy reefs = 1-5kg of white sand/year.
     <br><br>\u2022 <b>Medical resources:</b> marine organisms like cone snails produce compounds used in medicines (e.g., ziconotide, a painkiller 1,000x stronger than morphine).
 
