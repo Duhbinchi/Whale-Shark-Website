@@ -88,3 +88,56 @@ setTimeout(() => {
     }
   }, 15000); // 15 seconds
 }, 1000); // 1 second delay for the first topic (adjust as needed)
+
+
+// Page 4
+
+let currentSlideIndex = 0;
+const slides = document.querySelectorAll('.slide');
+const indicators = document.querySelectorAll('.indicator');
+const contents = document.querySelectorAll('.content');
+const totalSlides = slides.length;
+const page4 = document.querySelector('.page-4');
+
+const bgClasses = ['bg1', 'bg2', 'bg3', 'bg4'];
+
+function updatePage4Bg(index) {
+  if (!page4) return;
+  bgClasses.forEach(cls => page4.classList.remove(cls));
+  page4.classList.add(bgClasses[index]);
+}
+
+function showSlide(index) {
+  // Hide all slides and contents
+  slides.forEach(slide => slide.classList.remove('active'));
+  indicators.forEach(indicator => indicator.classList.remove('active'));
+  contents.forEach(content => content.classList.remove('active'));
+  // Show current slide and content
+  slides[index].classList.add('active');
+  indicators[index].classList.add('active');
+  contents[index].classList.add('active');
+  updatePage4Bg(index);
+}
+
+function changeSlide(direction) {
+  currentSlideIndex += direction;
+  if (currentSlideIndex >= totalSlides) {
+    currentSlideIndex = 0;
+  } else if (currentSlideIndex < 0) {
+    currentSlideIndex = totalSlides - 1;
+  }
+  showSlide(currentSlideIndex);
+}
+
+function currentSlide(index) {
+  currentSlideIndex = index - 1;
+  showSlide(currentSlideIndex);
+}
+
+// Auto-advance slides every 20 seconds
+setInterval(() => {
+  changeSlide(1);
+}, 20000);
+
+// Initialize
+showSlide(0);

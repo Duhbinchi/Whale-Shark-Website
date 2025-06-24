@@ -1,5 +1,4 @@
-
-    body {
+body {
       color: aquamarine;
       background-color: #001f4d;
       margin: 0;
@@ -9,7 +8,7 @@
       overflow-x: hidden;
     }
 
-    .page-1, .page-2, .page-3 {
+    .page-1, .page-2, .page-3, .page-4 {
       position: relative;
       width: 100vw;
       height: 100vh;
@@ -102,6 +101,7 @@
       top: 25%;
       z-index: 1;
       max-width: 30%;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
     }
 
     .action-text h2 {
@@ -184,37 +184,47 @@
     .text-reefs {
       position: absolute;
       top: 25%;
-      left: 2%;
+      left: 3%;
       /* line-height: 1.5; */
       color: white;
       background-color: rgba(0, 36, 52, 0.2);
       padding: 0.5vw;
       border-radius: 7px;
       z-index: 1;
+      
+      font-size: 5vw;
+      padding: 0.3vw;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
     }
 
     .text-resources {
       position: absolute;
       top: 40%;
-      left: 2%;
+      left: 3%;
       /* line-height: 1.5; */
       color: white;
       background-color: rgba(0, 36, 52, 0.2);
       padding: 0.5vw;
       border-radius: 7px;
-      z-index: 1;
+      z-index: 1;      
+      font-size: 5vw;
+      padding: 0.3vw;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
     }
 
     .text-resilience {
       position: absolute;
       top: 55%;
-      left: 2%;
+      left: 3%;
       /* line-height: 1.5; */
       color: white;
       background-color: rgba(0, 36, 52, 0.2);
       padding: 0.5vw;
       border-radius: 7px;
-      z-index: 1;
+      z-index: 1;      
+      font-size: 5vw;
+      padding: 0.3vw;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
     }
 
     .info-box {
@@ -229,6 +239,8 @@
       max-width: 50%;
       max-height: 80%;
       background-color: rgba(117, 211, 255, 0.5);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
       padding: 1rem;
       border-radius: 10px;
       box-sizing: border-box;
@@ -245,7 +257,7 @@
     .text-resources:hover,
     .text-resilience:hover {
       color: aquamarine;
-      transform: scale(1.08);
+      transform: scale(1.15);
     }
 
   /* Add this near your other .text-reefs:hover rules */
@@ -291,13 +303,14 @@
     }
 
     .info-box::-webkit-scrollbar-thumb {
-      background-color: #001f4d; /* Color of the scrollbar thumb */
+      background-color: #63ffffa3; /* Color of the scrollbar thumb */
       border-radius: 10px; /* Rounded corners for the scrollbar thumb */
     }
     
 /* Page 3 */
     .page-3 {
       background-image: url(images/bg/bg_food3.jpg);;
+
       background-size: cover;         
       background-position: center;   
       background-repeat: no-repeat;  
@@ -418,4 +431,293 @@
 .icon-fact-box::-webkit-scrollbar-thumb {
     background: rgba(0, 174, 113, 0.6);
     border-radius: 10px; /* Rounded corners for the scrollbar thumb */
+    }
+
+  
+/* Page 4 */
+    .page-4 {
+      /* Remove background-image here, use slider image as background */
+      position: relative;
+      width: 100vw;
+      height: 100vh;
+      overflow: hidden;
+    }
+    .page-4::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      z-index: 0;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      filter: blur(8px) brightness(0.7);
+      transition: background-image 0.5s;
+    }
+
+    /* Backgrounds for each slide */
+    .page-4.bg1::before {
+      background-image: url('https://images.unsplash.com/photo-1583212292454-1fe6229603b7?w=800');
+    }
+    .page-4.bg2::before {
+      background-image: url('https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=800');
+    }
+    .page-4.bg3::before {
+      background-image: url('https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=800');
+    }
+    .page-4.bg4::before {
+      background-image: url('https://images.unsplash.com/photo-1546026423-cc4642628d2b?w=800');
+    }
+
+    .slider-container, .info-panel, .page-4 .line, .page-4 h4, .page-4 p {
+      position: relative;
+      z-index: 1;
+    }
+
+    .page-4 p {
+      font-size: 1.2vw;
+      top: 1rem;
+      left: clamp(2vw, 3%, 10vw);
+      /* position: absolute; */
+    }
+
+    .page-4 .line {
+      position: absolute;
+      width: 30%;
+      top: 9.5%;
+      left: clamp(2vw, 3%, 10vw);
+      border-bottom: 1px solid #fff;
+    }
+
+    .page-4 .line::after {
+      content: '';
+      position: absolute;
+      right: .5rem;       
+      top: -0.5rem;    
+      width: 0;        
+      height: 1rem;
+      border-left: 1px solid #fff;
+    }
+
+    .page-4 h4 {
+      font-size: 1.2vw;
+      position: absolute;
+      top: 2.5rem;
+      left: clamp(2vw, 3%, 10vw);
+    }
+
+    /* Slider Styles */
+    .slider-container {
+      position: absolute;
+      left: 5%;
+      top: 20%;
+      width: 45%;
+      height: 60%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .slider {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      border-radius: 15px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    }
+
+    .slide {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      transition: opacity 0.8s ease-in-out;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: white;
+    }
+
+    .slide.active {
+      opacity: 1;
+    }
+
+    /* Sample slide backgrounds - replace with your actual images */
+    .slide:nth-child(1) {
+      background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
+                  url('https://images.unsplash.com/photo-1583212292454-1fe6229603b7?w=800') center/cover;
+    }
+
+    .slide:nth-child(2) {
+      background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
+                  url('https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=800') center/cover;
+    }
+
+    .slide:nth-child(3) {
+      background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
+                  url('https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=800') center/cover;
+    }
+
+    .slide:nth-child(4) {
+      background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
+                  url('https://images.unsplash.com/photo-1546026423-cc4642628d2b?w=800') center/cover;
+    }
+
+    .slide h2 {
+      font-size: 3.5vw;
+      font-weight: bold;
+      margin-bottom: 1rem;
+      text-transform: uppercase;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    }
+
+    .slide .location {
+      font-size: 1.5vw;
+      font-weight: 300;
+      margin-bottom: 1rem;
+      border-bottom: 2px solid white;
+      padding-bottom: 0.5rem;
+    }
+
+    .slide .tagline {
+      font-size: 1.2vw;
+      font-style: italic;
+      opacity: 0.9;
+    }
+
+    /* Navigation arrows */
+    .nav-arrow {
+      position: absolute;
+      top: 70%;
+      transform: translateY(-50%);
+      background: rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(10px);
+      border: none;
+      color: white;
+      font-size: 2rem;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      z-index: 10;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .nav-arrow:hover {
+      background: rgba(255, 255, 255, 0.3);
+      transform: translateY(-50%) scale(1.1);
+    }
+
+    .nav-arrow.prev {
+      left: 10px; /* Move inside the slider */
+    }
+
+    .nav-arrow.next {
+      right: 10px; /* Move inside the slider */
+    }
+
+    /* Static text box on the right */
+    .info-panel {
+      position: absolute;
+      right: 5%;
+      top: 20%;
+      width: 40%;
+      height: 60%;
+      background: rgba(117, 211, 255, 0.5);
+      backdrop-filter: blur(10px);
+      border-radius: 10px;
+      padding: 2rem;
+      box-sizing: border-box;
+      overflow-y: auto;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    }
+
+
+   .info-panel h3 {
+      font-size: 2.2vw;
+      color: aquamarine;
+      margin-bottom: 1rem;
+      text-align: center;
+      text-transform: uppercase;
+      margin-top: -.5em; /* Move header higher */
+    }
+
+    .info-panel .content {
+      display: none;
+      opacity: 1;
+      transform: none;
+      transition: none;
+      margin-top: -.5em; /* Move content higher */
+    }
+
+    .info-panel .content.active {
+      display: block;
+      opacity: 1;
+      transform: none;
+      transition: none;
+      margin-top: -.5em; /* Move content higher */
+    }
+
+    .info-panel p {
+      font-size: 1rem;
+      line-height: 1.5em;
+      color: white;
+      margin-top: -.5em; /* Move paragraphs higher */
+      margin-left: -2em;
+    }
+
+    .info-panel b {
+      color: rgb(246, 255, 127);
+      font-weight: bold;
+    }
+
+    .info-panel em {
+      color: #b0c4de;
+      font-style: italic;
+      font-size: 0.9rem;
+    }
+
+    /* Slide indicators */
+    .slide-indicators {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 10px;
+      z-index: 10;
+    }
+
+    .indicator {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.4);
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .indicator.active {
+      background: aquamarine;
+      transform: scale(1.2);
+    }
+
+    /* Scrollbar styling for info panel */
+    .info-panel::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    .info-panel::-webkit-scrollbar-thumb {
+      background-color: #63ffffa3; 
+      border-radius: 10px;
     }
