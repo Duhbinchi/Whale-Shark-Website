@@ -8,7 +8,7 @@ const infoContent = {
       The Philippines has the second highest seagrass diversity in the world, second only to Australia. 
       <br><br>Due to the country's marine biodiversity richness, conservationists have advocated its becoming a special focus of marine conservation efforts.
 
-      <br><br><em>      (The 4th National Report to the Convention on Biological Diversity, 2009, p. 45).
+      <br><br><a href='https://www.undp.org/philippines/publications/4th-philippine-national-report-convention-biological-diversity' target=_black>The 4th Philippine National Report to the Convention on Biological Diversity. (n.d.).UNDP.</a>
     </p>
   `,
   resources: `
@@ -19,7 +19,7 @@ const infoContent = {
     <br><br>\u2022 <b>Coral reefs boost eco-tourism</b>: 3rd largest reef area (~2.5 million hectares) and most diverse coral reef in the world where 1m² of healthy reefs = 1-5kg of white sand/year.
     <br><br>\u2022 <b>Medical resources:</b> marine organisms like cone snails produce compounds used in medicines (e.g., ziconotide, a painkiller 1,000x stronger than morphine).
 
-    <br><br><br><br><em>(Philippine Biodiversity Strategy and Action Plan (2016), "National Estimates of Values of Philippine Reefs" Ecosystem Services (2018)
+    <br><br><br><br><a href='https://www.sciencedirect.com/science/article/abs/pii/S0921800917300812' target=_black>Tamayo N., et al. (2018). National Estimates of Values of Philippine Reefs' Ecosystem Service. Ecological Economics. Volume 146.</a>
     </p>
   `,
 
@@ -30,7 +30,7 @@ const infoContent = {
       <br><br><img src="images/fact-coastal_protection2.jpg">
       <img src="images/fact-coastal_protection.jpg">
 
-      <em>(The effectiveness of coral reefs for coastal hazard risk reduction and adaptation. Nature Communications, 5, Article 3794.)
+      <a href='https://doi.org/10.1038/ncomms4794' target=_black>Ferrario, F., et al. (2014). The effectiveness of coral reefs for coastal hazard risk reduction and adaptation. Nature Communications, 5(1). </a>
     </p>
   `,
 };
@@ -134,10 +134,10 @@ function currentSlide(index) {
   showSlide(currentSlideIndex);
 }
 
-// Auto-advance slides every 20 seconds
-setInterval(() => {
-  changeSlide(1);
-}, 20000);
+// DISABLED: Auto-advance slides every 20 seconds
+// setInterval(() => {
+//   changeSlide(1);
+// }, 25000);
 
 // Initialize
 showSlide(0);
