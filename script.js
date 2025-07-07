@@ -1,3 +1,26 @@
+// --- Card click-to-link for Page 5 ---
+document.addEventListener('DOMContentLoaded', function() {
+  const cardLinks = [
+    'https://www.fao.org/philippines/news/detail/es/c/435529/',
+    'https://www.researchgate.net/publication/318451686_Initial_Findings_of_the_Nationwide_Assessment_of_Philippine_Coral_Reefs_Philippine_Journal_of_Science_1462177-185', // Licuanan et al. (2017) - use a journal link or placeholder
+    'https://oneocean.org/flash/the_philippine_seas.html',
+    'https://www.researchgate.net/publication/280940198_Detection_of_ciguatera_fish_poisoning_in_the_Philippines',
+    'https://theguidon.com/2023/09/a-sea-of-food-persisting-problems-in-the-fishing-sector/',
+    'https://iwlearn.net/files/pdfs/Ahmed%20et%20al%202007_Coral%20reefs%20Bolinao.pdf',
+    'https://www.greeneconomycoalition.org/news-and-resources/philippine-mangroves-fight-floods#:~:text=Troublingly%2C%20mangroves%20in%20the%20Philippines,well%20as%20providing%20jobs%20and',
+    'https://oneocean.org/flash/the_philippine_seas.html'
+  ];
+  const cards = document.querySelectorAll('.page-5 .card');
+  cards.forEach((card, i) => {
+    card.addEventListener('click', function(e) {
+      // Only open if a link is defined
+      if (cardLinks[i]) {
+        window.open(cardLinks[i], '_blank');
+      }
+    });
+    card.style.cursor = 'pointer';
+  });
+});
 const infoContent = {
   reefs: `
     <p>
