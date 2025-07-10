@@ -1253,3 +1253,36 @@ body {
   border-radius: 12px;
   border: none;
 }
+
+#loader {
+  position: fixed;
+  z-index: 99999;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: #eaf6fb;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.4s;
+}
+
+.loader-spinner {
+  width: 60px;
+  height: 60px;
+  border: 8px solid #b3e0f7;
+  border-top: 8px solid #176b87;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 18px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg);}
+  100% { transform: rotate(360deg);}
+}
+
+.loader-text {
+  font-size: 1.3em;
+  color: #176b87;
+  letter-spacing: 1px;
+}
