@@ -8,7 +8,64 @@ body {
       overflow-x: hidden;
     }
 
-    .page-1, .page-2, .page-3, .page-4, .page-5 {
+
+.navbar {
+  position: fixed;
+  top: 24px;
+  right: 32px;
+  z-index: 9999;
+  font-family: inherit;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropbtn {
+  background: #0a2a3a79;
+  color: #fff;
+  padding: 12px 24px;
+  font-size: 1.1em;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  transition: background 0.2s;
+}
+
+.dropbtn:hover {
+  background: #176b87;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  right: 0;
+  background: #ffffff;
+  min-width: 180px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.18);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.dropdown-content a {
+  color: #0a2a3a;
+  padding: 12px 18px;
+  text-decoration: none;
+  display: block;
+  font-size: 1em;
+  transition: background 0.15s;
+}
+
+.dropdown-content a:hover {
+  background: #e8e8e8;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+    .page-1, .page-2, .page-3, .page-4, .page-5, .page-6, .last-page{
       position: relative;
       width: 100vw;
       height: 100vh;
@@ -25,7 +82,7 @@ body {
     }
     
     a:hover {
-      color: #fff700;
+      /* color: #fff700; */
       text-decoration: underline;
     }
 
@@ -170,6 +227,7 @@ body {
       top: 1rem;
       left: clamp(2vw, 3%, 10vw);
       position: absolute;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     }
 
     .page-2 .line {
@@ -336,6 +394,7 @@ body {
     }
 
     .page-3 p {
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
       font-size: 1.2vw;
       top: 1rem;
       left: clamp(2vw, 3%, 10vw);
@@ -476,6 +535,7 @@ body {
     }
 
     .page-4 p {
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
       font-size: 1.2vw;
       top: 1rem;
       left: clamp(2vw, 3%, 10vw);
@@ -774,6 +834,8 @@ body {
 }
 
 .card-note1 {
+  text-align: center;
+  justify-content: center;
   position: absolute;
   top: 13vw;
   left: .4vw;
@@ -791,6 +853,8 @@ body {
 }
 
 .card-note2 {
+  text-align: center;
+  justify-content: center;
   position: absolute;
   top: 29vw;
   left: .4vw;
@@ -934,9 +998,10 @@ body {
   pointer-events: none;
 }
 .card:hover {
-  transform: scale(1.045);
+  /* transform: scale(1.02); */
   box-shadow: 0 16px 44px rgba(0,0,0,0.28);
 }
+
 .card:hover::after {
   background: rgba(0,0,0,0.32);
 }
@@ -994,4 +1059,197 @@ body {
   background-image: url('images/card/8.jpg');
   background-size: cover;
   background-position: center;
+}
+
+/* Page 6 */
+.page-6 {
+  /* background-image: url(images/bg/ocean-threats.jpg); */
+  background: linear-gradient(to right, rgba(186, 0, 37, 0.8), rgba(0, 36, 52, 0.8));
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+
+.page-6 p {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  font-size: 1.2vw;
+  top: 1rem;
+  left: clamp(2vw, 3%, 10vw);
+  position: absolute;
+}
+
+.page-6 .line {
+  position: absolute;
+  width: 30%;
+  top: 9.5%;
+  left: clamp(2vw, 3%, 10vw);
+  border-bottom: 1px solid #fff;
+}
+
+.page-6 .line::after {
+  content: '';
+  position: absolute;
+  right: .5rem;       
+  top: -0.5rem;    
+  width: 0;        
+  height: 1rem;
+  border-left: 1px solid #fff;
+}
+
+.page-6 h4 {
+  font-size: 1.2vw;
+  position: absolute;
+  top: 2.5rem;
+  left: clamp(2vw, 3%, 10vw);
+}
+
+/* --- Page 6 Threats Section --- */
+.page-6 .big-text {
+  position: absolute;
+  left: 3%;
+  color: rgb(255, 122, 122);
+  background-color: rgba(0, 36, 52, 0.2);
+  padding: 0.5vw;
+  border-radius: 7px;
+  z-index: 1;
+  font-size: 3.5vw;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.page-6 .text-overfishing { top: 22%; }
+.page-6 .text-pollution { top: 36%; }
+.page-6 .text-climate { top: 50%; }
+.page-6 .text-invasive { top: 64%; }
+.page-6 .text-policy { top: 78%; }
+.page-6 .big-text:hover,
+.page-6 .big-text.threat-active {
+  color: rgb(255, 43, 43);
+  transform: scale(1.13);
+}
+
+#threatInfoBox {
+  display: flex;
+  position: absolute;
+  overflow: auto;
+  right: 3%;
+  top: 10%;
+  z-index: 1;
+  width: 750px;
+  height: 700px;
+  max-width: 50%;
+  max-height: 85%;
+  background-color: rgba(255, 64, 102, 0.5);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  padding: 1rem;
+  border-radius: 10px;
+  box-sizing: border-box;
+  scrollbar-color: rgba(255, 64, 102, 0.5) transparent; /* Custom scrollbar color */
+  overflow-x: hidden;
+}
+
+#threatInfoBox p {
+  top: 53%;
+  left: 1%;
+}
+
+#threatInfoBox img {
+  display: block;
+  position: absolute;
+  margin: 0 auto 1em auto;
+  left: 5%;
+  width: 570px;
+  height: 250px;
+  border-radius: 10px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.18);
+  z-index: -1;
+}
+
+/* last page */
+.last-page {
+  /* background is a gradient of aqua and dark blue (earlier hex); */
+  background-image: linear-gradient(to right, rgba(0, 36, 52, 0.8), rgba(0, 179, 255, 0.8));
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+
+.last-page p {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  font-size: 1.2vw;
+  top: 1rem;
+  left: clamp(2vw, 3%, 10vw);
+  line-height: 1.5;
+  position: absolute;
+  max-width: 50%;
+  z-index: 2;
+}
+
+.last-page b {
+  color: aqua; font-weight: bold;
+}
+
+/* at the center right and fill */
+/* .last-page img {
+  z-index: 1;
+  position: absolute;
+  right: 5%;
+  top: 20%;
+  width: 40vw;
+  height: auto;
+  max-height: 60vh;
+  border-radius: 10px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.18);
+} */
+
+.whale-shark-bg {
+  position: absolute;
+  left: 90%;
+  bottom: -5%;
+  width: 800px;
+  animation: whaleFloat 4s ease-in-out infinite;
+  transform: translateX(-50%) scaleX(-1); /* flip horizontally */
+}
+
+@keyframes whaleFloat {
+  0%   { transform: translateX(-50%) translateY(0) scaleX(-1) rotate(12deg); }
+  50%  { transform: translateX(-50%) translateY(-10px) scaleX(-1) rotate(12deg); }
+  100% { transform: translateX(-50%) translateY(0) scaleX(-1) rotate(12deg); }
+}
+
+.video-box {
+  background: #f7fcff;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+  position: absolute;
+  top: 5%;
+  right: 13%;
+  z-index: 10;
+  /* Remove fixed width/height */
+  width: 395px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.video-box iframe {
+  width: 100%;
+  height: 230px;
+  border-radius: 12px;
+  border: none;
 }
