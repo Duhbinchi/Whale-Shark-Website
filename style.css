@@ -82,7 +82,8 @@ body {
     }
     
     a:hover {
-      /* color: #fff700; */
+      color: #f3fc00;
+      text-shadow: 0 1px 8px #003c4d;
       text-decoration: underline;
     }
 
@@ -102,6 +103,30 @@ body {
       justify-content: center;
       align-items: center;
     }
+
+.page-1 .xcard-note {
+      position: absolute;
+      right: 5vw;
+      bottom: 3vw;
+      top: auto;
+      z-index: 20;
+      font-size: 1.05vw;
+      color: #fff;
+      padding: 0.5em 1.2em;
+      border-radius: 12px;
+      font-weight: 500;
+      letter-spacing: 0.02em;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+      background-color :#0038418e;
+      transition: color 0.3s ease-in-out, transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+  .page-1 .xcard-note:hover {
+    font-style: bold;
+    color: aquamarine;
+    transform: scale(1.15) translateX(-55px);
+  }
+
 
   .whale-wrapper {
     position: relative; /* or remove position */
@@ -123,14 +148,14 @@ body {
     z-index: 5;
     --whale-scale: 1;
     animation: whale-float 5s ease-in-out infinite;
-    transition: all 2.5s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform 2.5s cubic-bezier(0.4, 0, 0.2, 1);
     transform: translateY(0) scale(var(--whale-scale));
     pointer-events: none;
     transform-style: preserve-3d;
     }
 
     .whale-wrapper:hover .whale {
-    --whale-scale: 1.15;
+    --whale-scale: 1.05;
 
     }
 
@@ -207,6 +232,34 @@ body {
   color: aquamarine;
 }
 
+  .sdg {
+    position: relative; /* Ensure the container is positioned */
+    width: auto;
+    height: auto;
+    right: 8%;
+    top: 5%;
+    /* lower transparency */
+    opacity: 0.9; /* Adjust as needed */
+  }
+  
+  .sdg img {
+    position: absolute;
+    top: 0;
+    width: 400px;      
+    height: auto;     
+    max-width: 23vw;  
+    max-height: 23vw; 
+    z-index: 2;
+    object-fit: contain; 
+    border-radius: 10px; 
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s;
+  }
+
+.sdg:hover img {
+  transform: scale(1.08);
+  opacity: 1;
+}
+
 
 /* Page 2 */
     .page-2 {
@@ -220,6 +273,29 @@ body {
       display: flex;
       justify-content: center;
       align-items: center;
+    }
+
+    .page-2 .card-note {
+      position: absolute;
+      left: 2vw;
+      bottom: 3vw;
+      top: auto;
+      z-index: 10;
+      font-size: 1.05vw;
+      color: #fff;
+      padding: 0.5em 1.2em;
+      border-radius: 12px;
+      opacity: 0.82;
+      font-weight: 500;
+      letter-spacing: 0.02em;
+      animation: flashFade 3.5s infinite;
+      background: none;
+    }
+    
+    @keyframes flashFade {
+      0%   { opacity: 0.2; }
+      50%  { opacity: 1; }
+      100% { opacity: 0.2; }
     }
 
     .page-2 p {
@@ -393,6 +469,29 @@ body {
       align-items: center;
     }
 
+    .page-3 .card-note {
+      position: absolute;
+      left: 2vw;
+      bottom: 3vw;
+      top: auto;
+      z-index: 100;
+      font-size: 1.05vw;
+      color: #fff;
+      padding: 0.5em 1.2em;
+      border-radius: 12px;
+      opacity: 0.82;
+      font-weight: 500;
+      letter-spacing: 0.02em;
+      animation: flashFade 3.5s infinite;
+      background: none;
+    }
+    
+    @keyframes flashFade {
+      0%   { opacity: 0.2; }
+      50%  { opacity: 1; }
+      100% { opacity: 0.2; }
+    }
+
     .page-3 p {
       text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
       font-size: 1.2vw;
@@ -510,6 +609,29 @@ body {
 
   
 /* Page 4 */
+
+      .page-4 .card-note {
+      position: absolute;
+      left: 2vw;
+      bottom: 1vw;
+      top: auto;
+      z-index: 10;
+      font-size: 1.05vw;
+      color: #fff;
+      padding: 0.5em 1.2em;
+      border-radius: 12px;
+      opacity: 0.82;
+      font-weight: 500;
+      letter-spacing: 0.02em;
+      animation: flashFade 3.5s infinite;
+      background: none;
+    }
+    
+    @keyframes flashFade {
+      0%   { opacity: 0.2; }
+      50%  { opacity: 1; }
+      100% { opacity: 0.2; }
+    }
     .page-4 {
       /* Remove background-image here, use slider image as background */
       position: relative;
