@@ -459,7 +459,7 @@ body {
     
 /* Page 3 */
     .page-3 {
-      background-image: url(images/bg/bg_food3.jpg);;
+      background-image: url(images/bg/colorful_reef.jpg);;
 
       background-size: cover;         
       background-position: center;   
@@ -1369,6 +1369,20 @@ body {
   align-items: center;
 }
 
+.video-box:hover::after {
+    content: "I interviewed Roderick Suarez, a relative from a fishermen family at Talim Island. He noted that fish stocks from the island became less over the years because of pollution from nearby factories. He also mentioned that during the pandemic, the fish stocks were able to recover for some period of time because of less human activities.";
+    position: absolute;
+    bottom: -10rem; /* Adjust as needed */
+    left: 10px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-size: 1rem;
+    z-index: 10;
+}
+
 .video-box iframe {
   width: 100%;
   height: 230px;
@@ -1407,4 +1421,57 @@ body {
   font-size: 1.3em;
   color: #176b87;
   letter-spacing: 1px;
+}
+
+.last-page .interview-note {
+  position: absolute;
+  font-size: 1.05vw;
+  color: #fff;
+  padding: 0.5em 1.2em;
+  border-radius: 12px;
+  opacity: 0.82;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  background: none;
+
+  top: 6.2vw;
+  right: 3.4vw;
+  z-index: 10;
+  text-shadow: 0 2px 8px #002b3a, 0 0 2px #000, 0 0 8px #000;
+}
+
+.last-page .interview-note {
+    position: relative;
+    cursor: pointer;
+}
+
+.last-page .interview-note:hover::after {
+    content: "I interview Mr. Suarez from a fishermen family at Talim Island.";
+    position: absolute;
+    bottom: -50px; /* Adjust as needed */
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    white-space: nowrap;
+    z-index: 10;
+}
+
+.last-page .last-card-note {
+  position: absolute;
+  font-size: 1.05vw;
+  color: #fff;
+  padding: 0.5em 1.2em;
+  border-radius: 12px;
+  opacity: 0.82;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  background: none;
+
+  top: 6.2vw;
+  right: 3.4vw;
+  z-index: 10;
+  text-shadow: 0 2px 8px #002b3a, 0 0 2px #000, 0 0 8px #000;
 }

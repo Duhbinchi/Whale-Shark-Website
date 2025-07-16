@@ -293,3 +293,34 @@ window.addEventListener('load', function() {
     setTimeout(() => loader.style.display = 'none', 400);
   }
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    const interviewNote = document.querySelector('.last-page .interview-note');
+
+    if (interviewNote) {
+        interviewNote.addEventListener('mouseenter', function() {
+            const dropdown = document.createElement('div');
+            dropdown.classList.add('dropdown-box');
+            dropdown.textContent = 'I interview Mr. Suarez from a fishermen family at Talim Island. He noted that fish sticks from the island became less over the years because of pollution from nearby factories. ';
+            dropdown.style.position = 'absolute';
+            dropdown.style.bottom = '-50px'; // Adjust as needed
+            dropdown.style.left = '0';
+            dropdown.style.backgroundColor = 'rgba(0, 0, 0, 0.8)';
+            dropdown.style.color = 'white';
+            dropdown.style.padding = '10px';
+            dropdown.style.borderRadius = '5px';
+            dropdown.style.boxShadow = '0 4px 6px rgba(0, 0, 0, 0.1)';
+            dropdown.style.whiteSpace = 'nowrap';
+            dropdown.style.zIndex = '10';
+
+            interviewNote.appendChild(dropdown);
+        });
+
+        interviewNote.addEventListener('mouseleave', function() {
+            const dropdown = interviewNote.querySelector('.dropdown-box');
+            if (dropdown) {
+                interviewNote.removeChild(dropdown);
+            }
+        });
+    }
+});
